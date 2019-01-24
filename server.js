@@ -19,7 +19,7 @@ app.use(urlencodedParser);
 app.use(jsonParser);
 app.use(express.static(__dirname + "/app/build/"));
 
-app.get('/', function (req, res) {
+app.get('/data', function (req, res) {
   request('https://www.forbes.com/ajax/list/data?year=2018&uri=billionaires&type=person', function(error, response, body) {
     if (error) {
       throw error;
